@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PegasusMetadataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ClientTable">
+    <Key>
+      <PropertyRef Name="IdClient" />
+    </Key>
+    <Property Name="ActiveClientAccessCodeGeneratedAt" Type="bigint" />
+    <Property Name="ActiveClientAccessCode" Type="nvarchar" MaxLength="255" />
+    <Property Name="DateRegistered" Type="datetime" />
+    <Property Name="DatabaseServer" Type="nvarchar" MaxLength="255" />
+    <Property Name="DatabaseName" Type="nvarchar" MaxLength="255" />
+    <Property Name="DatabaseUserName" Type="nvarchar" MaxLength="255" />
+    <Property Name="DatabasePassword" Type="nvarchar" MaxLength="255" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="255" />
+    <Property Name="IsProvisioned" Type="bit" />
+    <Property Name="CreatedAt" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="LastUpdatedAt" Type="datetime" />
+    <Property Name="LastUpdatedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="CustomerType" Type="nvarchar" MaxLength="255" />
+    <Property Name="CustomerName" Type="nvarchar" MaxLength="255" />
+    <Property Name="CustomerNumber" Type="nvarchar" MaxLength="255" />
+    <Property Name="IsRegisteredForTax" Type="bit" />
+    <Property Name="TaxRegistrationNumber" Type="nvarchar" MaxLength="255" />
+    <Property Name="OrderNumber" Type="nvarchar" MaxLength="255" />
+    <Property Name="DefaultPostalAddressFromResidential" Type="bit" />
+    <Property Name="DatePreRegistered" Type="datetime" />
+    <Property Name="SiteCode" Type="nvarchar" MaxLength="255" />
+    <Property Name="ActivationId" Type="nvarchar" MaxLength="255" />
+    <Property Name="DateExportedToCRM" Type="datetime" />
+    <Property Name="SalesPerson" Type="nvarchar" MaxLength="255" />
+    <Property Name="AccessBlocked" Type="bit" />
+    <Property Name="AccessBlockedReason" Type="nvarchar" MaxLength="255" />
+    <Property Name="AppVersion" Type="nvarchar" MaxLength="10" />
+    <Property Name="ServicesBaseUrl" Type="nvarchar" MaxLength="128" />
+    <Property Name="LiquidPartnerClientId" Type="nvarchar" MaxLength="255" />
+    <Property Name="DefaultAccountContact" Type="bit" />
+    <Property Name="ReferenceCode" Type="nvarchar" MaxLength="128" />
+    <Property Name="DateExportedForWhiteLabel" Type="datetime" />
+    <Property Name="WhiteLabelClientId" Type="nvarchar" MaxLength="128" />
+    <Property Name="IdClient_Original" Type="int" />
+    <Property Name="IdClient" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FK_WhiteLabelInfoId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FK_LiquidPartnerId" Type="uniqueidentifier" />
+    <Property Name="BillingModelId" Type="uniqueidentifier" />
+    <Property Name="Status" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Species" Type="nvarchar" MaxLength="20" />
+    <Property Name="SchemaName" Type="varchar" MaxLength="255" />
+    <Property Name="Src" Type="varchar" MaxLength="128" />
+    <Property Name="SrcId" Type="varchar" MaxLength="128" />
+    <Property Name="FK_PrevWhiteLabelInfoId" Type="uniqueidentifier" />
+    <Property Name="ReportsServiceBaseUrl" Type="varchar" MaxLength="50" />
+    <Property Name="HasDebitOrder" Type="bit" />
+    <Property Name="DbVersion" Type="int" />
+    <Property Name="SalesPersonInitials" Type="nvarchar" MaxLength="5" />
+    <Property Name="LeadExportedToCRM" Type="datetime" />
+    <Property Name="PreRegEmployeeCount" Type="nvarchar" MaxLength="5" />
+    <Property Name="PreRegArea" Type="nvarchar" MaxLength="20" />
+    <Property Name="UIOption" Type="nvarchar" MaxLength="20" />
+    <Property Name="ReferralCode" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="UserAccountTable">
+    <Key>
+      <PropertyRef Name="IdUserAccount" />
+    </Key>
+    <Property Name="ActivatedAt" Type="datetime" />
+    <Property Name="ActivationEmailSentAt" Type="datetime" />
+    <Property Name="ActivationId" Type="nvarchar" MaxLength="255" />
+    <Property Name="ClientName" Type="nvarchar" MaxLength="255" />
+    <Property Name="CreationDate" Type="datetime" />
+    <Property Name="IsApproved" Type="bit" />
+    <Property Name="LastActivityDate" Type="datetime" />
+    <Property Name="LastPasswordChangeDate" Type="datetime" />
+    <Property Name="LockoutTimeout" Type="bigint" />
+    <Property Name="LoginAttemptDelay" Type="bigint" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Source" Type="nvarchar" MaxLength="255" />
+    <Property Name="AuthenticationId" Type="nvarchar" MaxLength="255" />
+    <Property Name="TempPassword" Type="nvarchar" MaxLength="255" />
+    <Property Name="UserAccessCodeForLogin" Type="nvarchar" MaxLength="255" />
+    <Property Name="UserOptions" Type="int" />
+    <Property Name="IdUser_Original" Type="int" />
+    <Property Name="IdUserAccount" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FK_ClientId" Type="uniqueidentifier" />
+    <Property Name="FK_UserId" Type="uniqueidentifier" />
+    <Property Name="IsAdminUser" Type="bit" />
+    <Property Name="Status" Type="nvarchar" MaxLength="12" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'PegasusMetadata.dbo.UserTable' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="UserTable">
+          <Property Name="IdUser" Type="uniqueidentifier" />
+          <Property Name="EmailAddress" Type="nvarchar" MaxLength="128" />
+          <Property Name="NewEmailAddress" Type="nvarchar" MaxLength="128" />
+          <Property Name="FK_WhiteLabelInfoId" Type="uniqueidentifier" />
+          <Property Name="LastEmailChangeRequestDate" Type="datetime" />
+          <Property Name="DisplayName" Type="nvarchar" MaxLength="255" />
+          <Property Name="IsLockedOut" Type="bit" />
+          <Property Name="FailureReason" Type="nvarchar" MaxLength="256" />
+          <Property Name="AccessBlocked" Type="bit" />
+          <Property Name="AccessBlockedReason" Type="nvarchar" MaxLength="255" />
+          <Property Name="LastLoginAttempt" Type="datetime" />
+          <Property Name="LastLockoutDate" Type="datetime" />
+          <Property Name="LastLoginDate" Type="datetime" />
+        </EntityType>-->
+  <Association Name="FK_User_Client">
+    <End Role="ClientTable" Type="Self.ClientTable" Multiplicity="0..1" />
+    <End Role="UserAccountTable" Type="Self.UserAccountTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClientTable">
+        <PropertyRef Name="IdClient" />
+      </Principal>
+      <Dependent Role="UserAccountTable">
+        <PropertyRef Name="FK_ClientId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PegasusMetadataModelStoreContainer">
+    <EntitySet Name="ClientTable" EntityType="Self.ClientTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserAccountTable" EntityType="Self.UserAccountTable" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_User_Client" Association="Self.FK_User_Client">
+      <End Role="ClientTable" EntitySet="ClientTable" />
+      <End Role="UserAccountTable" EntitySet="UserAccountTable" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

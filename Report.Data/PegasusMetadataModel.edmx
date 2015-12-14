@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="PegasusMetadataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ClientTable">
+          <Key>
+            <PropertyRef Name="IdClient" />
+          </Key>
+          <Property Name="ActiveClientAccessCodeGeneratedAt" Type="bigint" />
+          <Property Name="ActiveClientAccessCode" Type="nvarchar" MaxLength="255" />
+          <Property Name="DateRegistered" Type="datetime" />
+          <Property Name="DatabaseServer" Type="nvarchar" MaxLength="255" />
+          <Property Name="DatabaseName" Type="nvarchar" MaxLength="255" />
+          <Property Name="DatabaseUserName" Type="nvarchar" MaxLength="255" />
+          <Property Name="DatabasePassword" Type="nvarchar" MaxLength="255" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="255" />
+          <Property Name="IsProvisioned" Type="bit" />
+          <Property Name="CreatedAt" Type="datetime" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
+          <Property Name="LastUpdatedAt" Type="datetime" />
+          <Property Name="LastUpdatedBy" Type="nvarchar" MaxLength="255" />
+          <Property Name="CustomerType" Type="nvarchar" MaxLength="255" />
+          <Property Name="CustomerName" Type="nvarchar" MaxLength="255" />
+          <Property Name="CustomerNumber" Type="nvarchar" MaxLength="255" />
+          <Property Name="IsRegisteredForTax" Type="bit" />
+          <Property Name="TaxRegistrationNumber" Type="nvarchar" MaxLength="255" />
+          <Property Name="OrderNumber" Type="nvarchar" MaxLength="255" />
+          <Property Name="DefaultPostalAddressFromResidential" Type="bit" />
+          <Property Name="DatePreRegistered" Type="datetime" />
+          <Property Name="SiteCode" Type="nvarchar" MaxLength="255" />
+          <Property Name="ActivationId" Type="nvarchar" MaxLength="255" />
+          <Property Name="DateExportedToCRM" Type="datetime" />
+          <Property Name="SalesPerson" Type="nvarchar" MaxLength="255" />
+          <Property Name="AccessBlocked" Type="bit" />
+          <Property Name="AccessBlockedReason" Type="nvarchar" MaxLength="255" />
+          <Property Name="AppVersion" Type="nvarchar" MaxLength="10" />
+          <Property Name="ServicesBaseUrl" Type="nvarchar" MaxLength="128" />
+          <Property Name="LiquidPartnerClientId" Type="nvarchar" MaxLength="255" />
+          <Property Name="DefaultAccountContact" Type="bit" />
+          <Property Name="ReferenceCode" Type="nvarchar" MaxLength="128" />
+          <Property Name="DateExportedForWhiteLabel" Type="datetime" />
+          <Property Name="WhiteLabelClientId" Type="nvarchar" MaxLength="128" />
+          <Property Name="IdClient_Original" Type="int" />
+          <Property Name="IdClient" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="FK_WhiteLabelInfoId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="FK_LiquidPartnerId" Type="uniqueidentifier" />
+          <Property Name="BillingModelId" Type="uniqueidentifier" />
+          <Property Name="Status" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Species" Type="nvarchar" MaxLength="20" />
+          <Property Name="SchemaName" Type="varchar" MaxLength="255" />
+          <Property Name="Src" Type="varchar" MaxLength="128" />
+          <Property Name="SrcId" Type="varchar" MaxLength="128" />
+          <Property Name="FK_PrevWhiteLabelInfoId" Type="uniqueidentifier" />
+          <Property Name="ReportsServiceBaseUrl" Type="varchar" MaxLength="50" />
+          <Property Name="HasDebitOrder" Type="bit" />
+          <Property Name="DbVersion" Type="int" />
+          <Property Name="SalesPersonInitials" Type="nvarchar" MaxLength="5" />
+          <Property Name="LeadExportedToCRM" Type="datetime" />
+          <Property Name="PreRegEmployeeCount" Type="nvarchar" MaxLength="5" />
+          <Property Name="PreRegArea" Type="nvarchar" MaxLength="20" />
+          <Property Name="UIOption" Type="nvarchar" MaxLength="20" />
+          <Property Name="ReferralCode" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityContainer Name="PegasusMetadataModelStoreContainer">
+          <EntitySet Name="ClientTable" EntityType="Self.ClientTable" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PegasusMetadataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ClientTable">
+          <Key>
+            <PropertyRef Name="IdClient" />
+          </Key>
+          <Property Name="ActiveClientAccessCodeGeneratedAt" Type="Int64" />
+          <Property Name="ActiveClientAccessCode" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DateRegistered" Type="DateTime" Precision="3" />
+          <Property Name="DatabaseServer" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DatabaseName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DatabaseUserName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DatabasePassword" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="FullName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="IsProvisioned" Type="Boolean" />
+          <Property Name="CreatedAt" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="LastUpdatedAt" Type="DateTime" Precision="3" />
+          <Property Name="LastUpdatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CustomerType" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CustomerName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CustomerNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="IsRegisteredForTax" Type="Boolean" />
+          <Property Name="TaxRegistrationNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="OrderNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DefaultPostalAddressFromResidential" Type="Boolean" />
+          <Property Name="DatePreRegistered" Type="DateTime" Precision="3" />
+          <Property Name="SiteCode" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ActivationId" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DateExportedToCRM" Type="DateTime" Precision="3" />
+          <Property Name="SalesPerson" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="AccessBlocked" Type="Boolean" />
+          <Property Name="AccessBlockedReason" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="AppVersion" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ServicesBaseUrl" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="LiquidPartnerClientId" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DefaultAccountContact" Type="Boolean" />
+          <Property Name="ReferenceCode" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="DateExportedForWhiteLabel" Type="DateTime" Precision="3" />
+          <Property Name="WhiteLabelClientId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="IdClient_Original" Type="Int32" />
+          <Property Name="IdClient" Type="Guid" Nullable="false" />
+          <Property Name="FK_WhiteLabelInfoId" Type="Guid" Nullable="false" />
+          <Property Name="FK_LiquidPartnerId" Type="Guid" />
+          <Property Name="BillingModelId" Type="Guid" />
+          <Property Name="Status" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Species" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="SchemaName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Src" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="SrcId" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="FK_PrevWhiteLabelInfoId" Type="Guid" />
+          <Property Name="ReportsServiceBaseUrl" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="HasDebitOrder" Type="Boolean" />
+          <Property Name="DbVersion" Type="Int32" />
+          <Property Name="SalesPersonInitials" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="LeadExportedToCRM" Type="DateTime" Precision="3" />
+          <Property Name="PreRegEmployeeCount" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="PreRegArea" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="UIOption" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ReferralCode" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="PegasusMetadataEntitiesEF" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ClientTables" EntityType="Self.ClientTable" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PegasusMetadataModelStoreContainer" CdmEntityContainer="PegasusMetadataEntitiesEF">
+          <EntitySetMapping Name="ClientTables">
+            <EntityTypeMapping TypeName="PegasusMetadataModel.ClientTable">
+              <MappingFragment StoreEntitySet="ClientTable">
+                <ScalarProperty Name="ActiveClientAccessCodeGeneratedAt" ColumnName="ActiveClientAccessCodeGeneratedAt" />
+                <ScalarProperty Name="ActiveClientAccessCode" ColumnName="ActiveClientAccessCode" />
+                <ScalarProperty Name="DateRegistered" ColumnName="DateRegistered" />
+                <ScalarProperty Name="DatabaseServer" ColumnName="DatabaseServer" />
+                <ScalarProperty Name="DatabaseName" ColumnName="DatabaseName" />
+                <ScalarProperty Name="DatabaseUserName" ColumnName="DatabaseUserName" />
+                <ScalarProperty Name="DatabasePassword" ColumnName="DatabasePassword" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="IsProvisioned" ColumnName="IsProvisioned" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="LastUpdatedAt" ColumnName="LastUpdatedAt" />
+                <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+                <ScalarProperty Name="CustomerType" ColumnName="CustomerType" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="CustomerNumber" ColumnName="CustomerNumber" />
+                <ScalarProperty Name="IsRegisteredForTax" ColumnName="IsRegisteredForTax" />
+                <ScalarProperty Name="TaxRegistrationNumber" ColumnName="TaxRegistrationNumber" />
+                <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+                <ScalarProperty Name="DefaultPostalAddressFromResidential" ColumnName="DefaultPostalAddressFromResidential" />
+                <ScalarProperty Name="DatePreRegistered" ColumnName="DatePreRegistered" />
+                <ScalarProperty Name="SiteCode" ColumnName="SiteCode" />
+                <ScalarProperty Name="ActivationId" ColumnName="ActivationId" />
+                <ScalarProperty Name="DateExportedToCRM" ColumnName="DateExportedToCRM" />
+                <ScalarProperty Name="SalesPerson" ColumnName="SalesPerson" />
+                <ScalarProperty Name="AccessBlocked" ColumnName="AccessBlocked" />
+                <ScalarProperty Name="AccessBlockedReason" ColumnName="AccessBlockedReason" />
+                <ScalarProperty Name="AppVersion" ColumnName="AppVersion" />
+                <ScalarProperty Name="ServicesBaseUrl" ColumnName="ServicesBaseUrl" />
+                <ScalarProperty Name="LiquidPartnerClientId" ColumnName="LiquidPartnerClientId" />
+                <ScalarProperty Name="DefaultAccountContact" ColumnName="DefaultAccountContact" />
+                <ScalarProperty Name="ReferenceCode" ColumnName="ReferenceCode" />
+                <ScalarProperty Name="DateExportedForWhiteLabel" ColumnName="DateExportedForWhiteLabel" />
+                <ScalarProperty Name="WhiteLabelClientId" ColumnName="WhiteLabelClientId" />
+                <ScalarProperty Name="IdClient_Original" ColumnName="IdClient_Original" />
+                <ScalarProperty Name="IdClient" ColumnName="IdClient" />
+                <ScalarProperty Name="FK_WhiteLabelInfoId" ColumnName="FK_WhiteLabelInfoId" />
+                <ScalarProperty Name="FK_LiquidPartnerId" ColumnName="FK_LiquidPartnerId" />
+                <ScalarProperty Name="BillingModelId" ColumnName="BillingModelId" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Species" ColumnName="Species" />
+                <ScalarProperty Name="SchemaName" ColumnName="SchemaName" />
+                <ScalarProperty Name="Src" ColumnName="Src" />
+                <ScalarProperty Name="SrcId" ColumnName="SrcId" />
+                <ScalarProperty Name="FK_PrevWhiteLabelInfoId" ColumnName="FK_PrevWhiteLabelInfoId" />
+                <ScalarProperty Name="ReportsServiceBaseUrl" ColumnName="ReportsServiceBaseUrl" />
+                <ScalarProperty Name="HasDebitOrder" ColumnName="HasDebitOrder" />
+                <ScalarProperty Name="DbVersion" ColumnName="DbVersion" />
+                <ScalarProperty Name="SalesPersonInitials" ColumnName="SalesPersonInitials" />
+                <ScalarProperty Name="LeadExportedToCRM" ColumnName="LeadExportedToCRM" />
+                <ScalarProperty Name="PreRegEmployeeCount" ColumnName="PreRegEmployeeCount" />
+                <ScalarProperty Name="PreRegArea" ColumnName="PreRegArea" />
+                <ScalarProperty Name="UIOption" ColumnName="UIOption" />
+                <ScalarProperty Name="ReferralCode" ColumnName="ReferralCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,5 @@
+C:\Test Code\DevExpress Html5 Reports\Report.Model\bin\Debug\Report.Model.dll
+C:\Test Code\DevExpress Html5 Reports\Report.Model\bin\Debug\Report.Model.pdb
+C:\Test Code\DevExpress Html5 Reports\Report.Model\obj\Debug\Report.Model.csprojResolveAssemblyReference.cache
+C:\Test Code\DevExpress Html5 Reports\Report.Model\obj\Debug\Report.Model.dll
+C:\Test Code\DevExpress Html5 Reports\Report.Model\obj\Debug\Report.Model.pdb

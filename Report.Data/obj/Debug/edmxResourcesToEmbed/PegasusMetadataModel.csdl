@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PegasusMetadataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ClientTable">
+    <Key>
+      <PropertyRef Name="IdClient" />
+    </Key>
+    <Property Name="ActiveClientAccessCodeGeneratedAt" Type="Int64" />
+    <Property Name="ActiveClientAccessCode" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DateRegistered" Type="DateTime" Precision="3" />
+    <Property Name="DatabaseServer" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DatabaseName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DatabaseUserName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DatabasePassword" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="FullName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="IsProvisioned" Type="Boolean" />
+    <Property Name="CreatedAt" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LastUpdatedAt" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdatedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerType" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="IsRegisteredForTax" Type="Boolean" />
+    <Property Name="TaxRegistrationNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="OrderNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DefaultPostalAddressFromResidential" Type="Boolean" />
+    <Property Name="DatePreRegistered" Type="DateTime" Precision="3" />
+    <Property Name="SiteCode" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ActivationId" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DateExportedToCRM" Type="DateTime" Precision="3" />
+    <Property Name="SalesPerson" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AccessBlocked" Type="Boolean" />
+    <Property Name="AccessBlockedReason" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AppVersion" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="ServicesBaseUrl" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="LiquidPartnerClientId" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DefaultAccountContact" Type="Boolean" />
+    <Property Name="ReferenceCode" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="DateExportedForWhiteLabel" Type="DateTime" Precision="3" />
+    <Property Name="WhiteLabelClientId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="IdClient_Original" Type="Int32" />
+    <Property Name="IdClient" Type="Guid" Nullable="false" />
+    <Property Name="FK_WhiteLabelInfoId" Type="Guid" Nullable="false" />
+    <Property Name="FK_LiquidPartnerId" Type="Guid" />
+    <Property Name="BillingModelId" Type="Guid" />
+    <Property Name="Status" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Species" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="SchemaName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Src" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="SrcId" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="FK_PrevWhiteLabelInfoId" Type="Guid" />
+    <Property Name="ReportsServiceBaseUrl" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="HasDebitOrder" Type="Boolean" />
+    <Property Name="DbVersion" Type="Int32" />
+    <Property Name="SalesPersonInitials" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="LeadExportedToCRM" Type="DateTime" Precision="3" />
+    <Property Name="PreRegEmployeeCount" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="PreRegArea" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="UIOption" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ReferralCode" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="PegasusMetadataEntitiesEF" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ClientTables" EntityType="Self.ClientTable" />
+  </EntityContainer>
+</Schema>

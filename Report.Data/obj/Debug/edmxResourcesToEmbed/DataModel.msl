@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PegasusMetadataModelStoreContainer" CdmEntityContainer="PegasusMetadataEntities">
+    <EntitySetMapping Name="ClientTables">
+      <EntityTypeMapping TypeName="PegasusMetadataModel.ClientTable">
+        <MappingFragment StoreEntitySet="ClientTable">
+          <ScalarProperty Name="ActiveClientAccessCodeGeneratedAt" ColumnName="ActiveClientAccessCodeGeneratedAt" />
+          <ScalarProperty Name="ActiveClientAccessCode" ColumnName="ActiveClientAccessCode" />
+          <ScalarProperty Name="DateRegistered" ColumnName="DateRegistered" />
+          <ScalarProperty Name="DatabaseServer" ColumnName="DatabaseServer" />
+          <ScalarProperty Name="DatabaseName" ColumnName="DatabaseName" />
+          <ScalarProperty Name="DatabaseUserName" ColumnName="DatabaseUserName" />
+          <ScalarProperty Name="DatabasePassword" ColumnName="DatabasePassword" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="IsProvisioned" ColumnName="IsProvisioned" />
+          <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="LastUpdatedAt" ColumnName="LastUpdatedAt" />
+          <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+          <ScalarProperty Name="CustomerType" ColumnName="CustomerType" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="CustomerNumber" ColumnName="CustomerNumber" />
+          <ScalarProperty Name="IsRegisteredForTax" ColumnName="IsRegisteredForTax" />
+          <ScalarProperty Name="TaxRegistrationNumber" ColumnName="TaxRegistrationNumber" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="DefaultPostalAddressFromResidential" ColumnName="DefaultPostalAddressFromResidential" />
+          <ScalarProperty Name="DatePreRegistered" ColumnName="DatePreRegistered" />
+          <ScalarProperty Name="SiteCode" ColumnName="SiteCode" />
+          <ScalarProperty Name="ActivationId" ColumnName="ActivationId" />
+          <ScalarProperty Name="DateExportedToCRM" ColumnName="DateExportedToCRM" />
+          <ScalarProperty Name="SalesPerson" ColumnName="SalesPerson" />
+          <ScalarProperty Name="AccessBlocked" ColumnName="AccessBlocked" />
+          <ScalarProperty Name="AccessBlockedReason" ColumnName="AccessBlockedReason" />
+          <ScalarProperty Name="AppVersion" ColumnName="AppVersion" />
+          <ScalarProperty Name="ServicesBaseUrl" ColumnName="ServicesBaseUrl" />
+          <ScalarProperty Name="LiquidPartnerClientId" ColumnName="LiquidPartnerClientId" />
+          <ScalarProperty Name="DefaultAccountContact" ColumnName="DefaultAccountContact" />
+          <ScalarProperty Name="ReferenceCode" ColumnName="ReferenceCode" />
+          <ScalarProperty Name="DateExportedForWhiteLabel" ColumnName="DateExportedForWhiteLabel" />
+          <ScalarProperty Name="WhiteLabelClientId" ColumnName="WhiteLabelClientId" />
+          <ScalarProperty Name="IdClient_Original" ColumnName="IdClient_Original" />
+          <ScalarProperty Name="IdClient" ColumnName="IdClient" />
+          <ScalarProperty Name="FK_WhiteLabelInfoId" ColumnName="FK_WhiteLabelInfoId" />
+          <ScalarProperty Name="FK_LiquidPartnerId" ColumnName="FK_LiquidPartnerId" />
+          <ScalarProperty Name="BillingModelId" ColumnName="BillingModelId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Species" ColumnName="Species" />
+          <ScalarProperty Name="SchemaName" ColumnName="SchemaName" />
+          <ScalarProperty Name="Src" ColumnName="Src" />
+          <ScalarProperty Name="SrcId" ColumnName="SrcId" />
+          <ScalarProperty Name="FK_PrevWhiteLabelInfoId" ColumnName="FK_PrevWhiteLabelInfoId" />
+          <ScalarProperty Name="ReportsServiceBaseUrl" ColumnName="ReportsServiceBaseUrl" />
+          <ScalarProperty Name="HasDebitOrder" ColumnName="HasDebitOrder" />
+          <ScalarProperty Name="DbVersion" ColumnName="DbVersion" />
+          <ScalarProperty Name="SalesPersonInitials" ColumnName="SalesPersonInitials" />
+          <ScalarProperty Name="LeadExportedToCRM" ColumnName="LeadExportedToCRM" />
+          <ScalarProperty Name="PreRegEmployeeCount" ColumnName="PreRegEmployeeCount" />
+          <ScalarProperty Name="PreRegArea" ColumnName="PreRegArea" />
+          <ScalarProperty Name="UIOption" ColumnName="UIOption" />
+          <ScalarProperty Name="ReferralCode" ColumnName="ReferralCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserAccountTables">
+      <EntityTypeMapping TypeName="PegasusMetadataModel.UserAccountTable">
+        <MappingFragment StoreEntitySet="UserAccountTable">
+          <ScalarProperty Name="ActivatedAt" ColumnName="ActivatedAt" />
+          <ScalarProperty Name="ActivationEmailSentAt" ColumnName="ActivationEmailSentAt" />
+          <ScalarProperty Name="ActivationId" ColumnName="ActivationId" />
+          <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+          <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+          <ScalarProperty Name="LastPasswordChangeDate" ColumnName="LastPasswordChangeDate" />
+          <ScalarProperty Name="LockoutTimeout" ColumnName="LockoutTimeout" />
+          <ScalarProperty Name="LoginAttemptDelay" ColumnName="LoginAttemptDelay" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="AuthenticationId" ColumnName="AuthenticationId" />
+          <ScalarProperty Name="TempPassword" ColumnName="TempPassword" />
+          <ScalarProperty Name="UserAccessCodeForLogin" ColumnName="UserAccessCodeForLogin" />
+          <ScalarProperty Name="UserOptions" ColumnName="UserOptions" />
+          <ScalarProperty Name="IdUser_Original" ColumnName="IdUser_Original" />
+          <ScalarProperty Name="IdUserAccount" ColumnName="IdUserAccount" />
+          <ScalarProperty Name="FK_ClientId" ColumnName="FK_ClientId" />
+          <ScalarProperty Name="FK_UserId" ColumnName="FK_UserId" />
+          <ScalarProperty Name="IsAdminUser" ColumnName="IsAdminUser" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
