@@ -24,7 +24,7 @@ namespace Xtreme.Reports.App_Start
                     "~/scripts/jquery-1.10.2.js",
                     "~/scripts/bootstrap.js",
                     "~/scripts/respond.js",
-                    "~/scripts/modernizr-2.6.2.js",
+                    "~/scripts/modernizr-2.6.2.js"
             });
 
             // A bundle of the angular scripts
@@ -32,17 +32,18 @@ namespace Xtreme.Reports.App_Start
                     "~/scripts/angular.js",
                     "~/scripts/angular-route.js",
                     "~/scripts/angular-resource.js",
-                    "~/scripts/angular-loader.js",
+                    "~/scripts/angular-loader.js"
             });
 
             // A bundle of the angular scripts
             bundles.Add<ScriptBundle>("~/bundles/angularui", new[] {
-                    "~/scripts/angular-ui/ui-bootstrap.js"
+                    "~/scripts/angular-ui/ui-bootstrap.js",
+                    "~/scripts/AngularUI/ui-router.js"
             });
 
             // A bundle of the angular scripts
             bundles.Add<ScriptBundle>("~/bundles/grid", new[] {
-                    "~/scripts/ui-grid.js",
+                    "~/scripts/ui-grid.js"
             });
 
             bundles.Add<ScriptBundle>("~/client/");

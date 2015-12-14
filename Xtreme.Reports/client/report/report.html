@@ -1,0 +1,8 @@
+﻿<div class="row" ng-controller="reportController">
+    <fieldset>
+        <legend>{{Title}}</legend>
+        <div class="col-md-12">
+            @{Html.RenderAction("_DocumentViewer", "Report");}
+        </div>
+    </fieldset>
+</div>

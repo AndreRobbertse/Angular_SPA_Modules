@@ -244,6 +244,8 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="client\home\home.html" />
+    <Content Include="client\report\report.html" />
     <Content Include="client\services\clientServices.js" />
     <Content Include="Content\ui-bootstrap-csp.css" />
     <Content Include="Content\ui-grid.css" />
@@ -253,6 +255,8 @@
     <Content Include="scripts\angular-ui\ui-bootstrap-tpls.min.js" />
     <Content Include="scripts\angular-ui\ui-bootstrap.js" />
     <Content Include="scripts\angular-ui\ui-bootstrap.min.js" />
+    <Content Include="scripts\AngularUI\ui-router.js" />
+    <Content Include="scripts\AngularUI\ui-router.min.js" />
     <Content Include="scripts\ui-grid.js" />
     <Content Include="scripts\ui-grid.min.js" />
     <Content Include="styles\bootstrap.css" />
@@ -1078,8 +1082,8 @@
     <Content Include="scripts\respond.js" />
     <Content Include="scripts\respond.min.js" />
     <Content Include="client\app.js" />
-    <Content Include="client\controllers\home\homeController.js" />
-    <Content Include="client\controllers\report\reportController.js" />
+    <Content Include="client\home\homeController.js" />
+    <Content Include="client\report\reportController.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
